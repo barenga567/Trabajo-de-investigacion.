@@ -1,0 +1,17 @@
+<!--calcule y escriba la suma de los pares y el producto de los impares-->
+<script>
+    let n=0, sumaP=0 ,productoI=1,numero=0,c=0;
+    n=Number(prompt(" ingrese la cantidad de numeros a calcular: "));
+
+    while(c<n){
+        numero=Number(prompt("ingrese un numero"));
+        if(numero % 2==0){
+            sumaP = sumaP + numero;
+        }else{
+            productoI=productoI * numero;
+        }
+        c++;
+    }
+    document.write("la suma de los pares es :",sumaP,"<br>");
+    document.write("el producto de los impares es :",productoI);
+</script>

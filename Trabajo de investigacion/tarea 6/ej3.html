@@ -1,0 +1,30 @@
+<!--Realizar un algoritmo que imprima los N primeros primos además la suma y promedio de ellos.-->
+<script>
+    let cantidadPrimos = 0,sumaPrimos = 0, n=2,i=0,c=2,esPrimo=0;
+    cantidadPrimos = Number(prompt("Ingrese la cantidad de números primos que desea calcular: "));
+    while (i < cantidadPrimos) {
+        c = 2;
+        esPrimo = true;
+        while (c <= Math.sqrt(n)) {
+        if (n % c === 0) {
+            esPrimo = false;
+            break;
+        }
+        c++;
+        }
+
+        if (esPrimo) {
+        sumaPrimos += n;
+        document.write(n , " ");
+
+        i++;
+        }
+
+        n++;
+    }
+    if (cantidadPrimos > 0) {
+    let promedioPrimos = sumaPrimos / cantidadPrimos;
+    document.write("<br>Suma de los primeros " , cantidadPrimos , " números primos: " , sumaPrimos , "<br>");
+    document.write("Promedio de los primeros " , cantidadPrimos , " números primos: " , promedioPrimos);
+    }
+</script>

@@ -1,0 +1,19 @@
+<!--calcular el sueldo total al fin de mes, si se sabe que la empresa reconoce un 10% de comisión sobre el total de las ventas realizadas,
+se debe imprimir: el total de comisiones y el sueldo total a recibir.-->
+<script>
+ var nombreVendedor = prompt("Ingrese el nombre del vendedor:");
+var sueldoBasico = parseFloat(prompt("Ingrese el sueldo básico del vendedor:"));
+var ventas = [];
+for (var i = 1; i <= 3; i++) {
+  var venta = parseFloat(prompt("Ingrese el monto de la venta " + i + ":"));
+  ventas.push(venta);
+}
+var totalVentas = ventas.reduce((a, b) => a + b, 0);
+var comision = 0.1 * totalVentas;
+var sueldoTotal = sueldoBasico + comision;
+document.write("<p>Nombre del vendedor: " + nombreVendedor + "</p>");
+document.write("<p>Sueldo Básico: $" + sueldoBasico.toFixed(2) + "</p>");
+document.write("<p>Total de Ventas: $" + totalVentas.toFixed(2) + "</p>");
+document.write("<p>Comisión (10%): $" + comision.toFixed(2) + "</p>");
+document.write("<p>Sueldo Total: $" + sueldoTotal.toFixed(2) + "</p>");
+</script>

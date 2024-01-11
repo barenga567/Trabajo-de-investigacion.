@@ -1,0 +1,15 @@
+<!-- presente los 10 primeros números Fibonacci además la suma y promedio de ellos.-->
+<script>
+    let a = 0, b = 1, c, i = 0, suma = 0, promedio = 0;
+    while (i < 10) {
+    document.write(a, ",");
+    suma = suma + a;
+    c = a + b;
+    a = b;
+    b = c;
+    i++;
+    promedio = suma/i;
+    }
+    document.write("<br>Suma: ", suma, "<br>");
+    document.write("Promedio: ", promedio);
+</script>

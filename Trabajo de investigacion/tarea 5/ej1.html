@@ -1,0 +1,18 @@
+<!--Desarrolle un algoritmo que permita leer un valor entero positivo N y determinar si es primo o no.-->
+<script>
+    let n=0,c=2;
+
+    n = Number(prompt(" ingrese cualquier valor: "));
+
+    while (n % c != 0 && n>1){
+        c++
+    }
+
+    if(c==n){
+        document.write(n," es primo ");
+        
+    }else{
+        document.write(n," no es primo ");
+        
+    }
+</script>

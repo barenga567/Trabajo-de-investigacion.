@@ -1,0 +1,27 @@
+<!--Realizar un algoritmo que imprima los 10 primeros primos y contar cuantos están entre 1 -10 y 15 – 25-->
+<script>
+  let contadorPrimos = 0,contadorEnRango1a10=0,contadorEnRango15a25=0,numero=2,esPrimo=true,divisor=2;
+  while (contadorPrimos < 10) {
+    esPrimo = true;
+    divisor = 2;
+    while (divisor <= Math.sqrt(numero)) {
+      if (numero % divisor === 0) {
+        esPrimo = false;
+        break;
+      }
+      divisor++;
+    }
+    if (esPrimo) {
+      document.write( numero,",");
+      contadorPrimos++;
+      if (numero >= 1 && numero <= 10) {
+        contadorEnRango1a10++;
+      } else if (numero >= 15 && numero <= 25) {
+        contadorEnRango15a25++;
+      }
+    }
+    numero++;
+  }
+document.write("<br>Cantidad de primos entre 1 y 10: ",contadorEnRango1a10);
+document.write("<br>Cantidad de primos entre 15 y 25:",contadorEnRango15a25);
+</script>

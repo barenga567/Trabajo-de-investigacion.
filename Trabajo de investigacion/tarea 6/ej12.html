@@ -1,0 +1,17 @@
+<!--Desarrolle un Algoritmo que lee dos números enteros A y B, imprimir el producto (A * B) y
+potencia (𝐴𝐵) utilizando suma y multiplicación sucesiva.-->
+<script>
+    let a=0, b=0, producto=0, potencia=1, i=0;
+    a=Number(prompt("ingrese el valor de A: "));
+    b=Number(prompt("ingrese el valor de B: "));
+
+    for(i=0; i < b; i++){
+        producto += a;
+    }
+
+    for(i=0; i<b ;i++){
+        potencia *= a;
+    }
+    document.write("Producto mediante suma sucesiva: ",producto);
+    document.write("<br>potencia : ",potencia);
+</script>

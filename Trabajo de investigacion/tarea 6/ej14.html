@@ -1,0 +1,18 @@
+<!--Desarrolle un algoritmo que permita convertir calificaciones numéricas-->
+<script>
+    let nota=0,calificaion="";
+    nota=Number(prompt("ingrese la nota en rango del 1 al 20: "));
+
+    if(nota>=19 && nota<=20){
+        calificaion="sobresaliente"
+    }else if(nota>=16 && nota<=18){
+        calificaion="Muy bueno"
+    }else if(nota>=13 && nota<=15){
+        calificaion="Bueno"
+    }else if(nota>=10 && nota<=12){
+        calificaion="Regular"
+    }else if(nota>=1 && nota<=9){
+        calificaion="Deficiente"
+    }
+    document.write("la nota es = ",nota," y es una calificaion: ",calificaion)
+</script>

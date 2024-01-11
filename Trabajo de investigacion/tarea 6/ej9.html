@@ -1,0 +1,16 @@
+<!--Se ingresa por teclado nombre del alumno, nota1, nota2 y nota 3, calcular la suma y el promedio total de las calificaciones,
+ presentar por pantalla el resultado.-->
+ <script>
+    let nombre= "", nota1=0, nota2=0, nota3=0, suma=0, promedio=0;
+        
+    nombre=prompt("Ingrese el nombre del alumno: ");
+    nota1=Number(prompt("ingrese la nota 1: "));
+    nota2=Number(prompt("ingrese la nota 2: "));
+    nota3=Number(prompt("ingrese la nota 3: "));
+    suma = nota1+nota2+nota3;
+    promedio = suma/3;
+    document.write("Nombre del alumno: ",nombre);
+    document.write("<br>la suma de las tres notas es: ",suma);
+    document.write("<br>el promedio total de las tres notas es: ",promedio);
+    
+ </script>
